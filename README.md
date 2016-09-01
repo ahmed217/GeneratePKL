@@ -1,4 +1,4 @@
-# This notebook shows how to generate dataset from images for python (pkl file).
+# How to generate pkl dataset from images for python.
 
 ##How to start: 
 
