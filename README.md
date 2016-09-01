@@ -24,6 +24,7 @@ The labels will be from 0 to 2 i.e.,
 {'pothole': 2, 'personbike': 1, 'construction': 0}
 ```
 
+##Variables     
 At the top of the script, you can modify the variables according to your dataset. For example 'totaldata' should be equal to the number of total images. Next three variables training, validation, testcnt should be modified according to your need; how many examples you want for training (you can put the percentage or you can put exact number), how many examples for validation and how many for testing.
 
 The next variable is the tuple of target image size. (height, width, channel) - this should be your target image size. The channel is GRAY or RGB. If the input images are GRAY then channel value should be 1, if input images are RGB then the channel value is 3. The source images will be resized to the target (height, width).  
