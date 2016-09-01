@@ -12,9 +12,21 @@ For example
        | - construction
 </pre>
 
-In the above folder structure pohole, personbike, construction will be the labels sorted in lexicographical order ['construction','personbike','pothole']. The labels will be from 0 to 2 i.e., {'pothole': 2, 'personbike': 1, 'construction': 0}
+In the above folder structure pohole, personbike, construction will be the labels sorted in lexicographical order 
+
+```python
+['construction','personbike','pothole']
+```
+
+The labels will be from 0 to 2 i.e., 
+
+```python
+{'pothole': 2, 'personbike': 1, 'construction': 0}
+```
 
 At the top of the script, you can modify the variables according to your dataset. For example 'totaldata' should be equal to the number of total images. Next three variables training, validation, testcnt should be modified according to your need; how many examples you want for training (you can put the percentage or you can put exact number), how many examples for validation and how many for testing.
 
 The next variable is the tuple of target image size. (height, width, channel) - this should be your target image size. The channel is GRAY or RGB. If the input images are GRAY then channel value should be 1, if input images are RGB then the channel value is 3. The source images will be resized to the target (height, width).  
- 
+
+* data -- a totaldata x (height * width * channel) numpy array of uint8. Each row of the array stores a (heifht, width) images of given channel. The first entries contains the RED channel values, the next the GREEN, and the final entry the blue. The image is stored in row-major order, so that the first entries of the array are the red channel values of the first row of the image. 
+* labels -- a list of totaldata numbers in the range of number of subfolders. The number at index i indicates the label of the ith image in the array data.  
