@@ -29,8 +29,8 @@ At the top of the script, you can modify the variables according to your dataset
 
 The next variable is the tuple of target image size. (height, width, channel) - this should be your target image size. The channel is GRAY or RGB. If the input images are GRAY then channel value should be 1, if input images are RGB then the channel value is 3. The source images will be resized to the target (height, width).  
 
-* **data** -- a totaldata x (height * width * channel) numpy array of uint8. Each row of the array stores a (heifht, width) images of given channel. The first entries contains the RED channel values, the next the GREEN, and the final entry the blue. The image is stored in row-major order, so that the first entries of the array are the red channel values of the first row of the image. 
-* **labels** -- a list of totaldata numbers in the range of number of subfolders. The number at index *i* indicates the label of the *i*th image in the array **data**. 
+* **data** -- this is a numpy array which has rows equal to totaldata, and columns equal to (height * width * channel). Each row of the array stores a (height, width) images of given channel. The first entries contains the RED channel values, the next the GREEN, and the final entry the blue. The image is stored in row-major order, so that the first entries of the array are the red channel values of the first row of the image. 
+* **labels** -- a list with numbers. The number at index *i* indicates the label of the *i*th image in the array **data**. 
 
 
 
